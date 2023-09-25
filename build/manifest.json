@@ -1,6 +1,6 @@
 {
   "short_name": "POKEDEX",
-  "name": "Just something",
+  "name": "Just a pokedex",
   "start_url": ".",
   "display": "standalone"
 }
