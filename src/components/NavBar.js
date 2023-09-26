@@ -30,7 +30,7 @@ const NavBar = ({ menuOptions, contact }) => {
             <i className="fa fa-remove"></i>
           </span>
           <img
-            src="/img/icon-pokeball.png"
+            src="./img/icon-pokeball.png"
             style={{ width: "45%" }}
             alt="menu"
             className="w3-round"
@@ -51,7 +51,7 @@ const NavBar = ({ menuOptions, contact }) => {
             >
               <i className={`fa fa-${m.icon} fa-fw w3-margin-right`}></i>
               {m.text}
-              {m.showBadge && favouritesList.length && (
+              {m.showBadge && favouritesList.length !== 0 && (
                 <Badges
                   styles={{ marginLeft: "3px" }}
                   text={favouritesList.length.toString()}

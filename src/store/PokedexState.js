@@ -12,6 +12,8 @@ import {
 } from "./types";
 import { getItems } from "../utils/localStorage";
 
+const url = "https://gabrielcarnez.com.ar/pokemons.php";
+
 const PokedexState = (props) => {
   const initState = {
     pokemonsList: {
@@ -55,9 +57,7 @@ const PokedexState = (props) => {
           },
         },
       });
-      await fetch(
-        `https://gabrielcarnez.com.ar/pokemons.php?generation=${generation}`
-      )
+      await fetch(`${url}?generation=${generation}`)
         .then((response) => response.json())
         .then((poke) => {
           dispatch({
@@ -105,7 +105,7 @@ const PokedexState = (props) => {
           },
         },
       });
-      await fetch(`http://gabrielcarnez.com.ar/pokemons.php?id=${id}`)
+      await fetch(`${url}?id=${id}`)
         .then((response) => response.json())
         .then((pokemon) => {
           dispatch({

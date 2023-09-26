@@ -3,7 +3,7 @@ import { changeFavicon } from "../utils/helpers";
 
 const About = () => {
   useEffect(() => {
-    changeFavicon("/img/icon-pokeball.png");
+    changeFavicon("./img/icon-pokeball.png");
   }, []);
 
   return (

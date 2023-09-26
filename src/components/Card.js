@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 export const CardLink = (props) => {
   const { link, text, img, action = false } = props;
 
-  const errorImg = "/img/no-image.png";
+  const errorImg = "./img/no-image.png";
 
   function onError(e) {
     e.target.src = errorImg;

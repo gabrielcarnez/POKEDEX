@@ -3,6 +3,7 @@ import { CardLink } from "../components/Card";
 import PokedexContext from "../store/PokedexContext";
 import { changeFavicon } from "../utils/helpers";
 import Notification from "../components/Notification";
+import Info from "../components/Info";
 
 const Favourites = () => {
   const userContext = useContext(PokedexContext);
@@ -11,34 +12,38 @@ const Favourites = () => {
   const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
-    changeFavicon("/img/icon-pokeball.png");
+    changeFavicon("./img/icon-pokeball.png");
   }, []);
 
   return (
     <Fragment>
       <div className="w3-row-padding">
-        {favouritesList.map((p, index) => {
-          const { img: imgs = [], name: text, id } = p;
-          const link = `/detail/${id}`;
-          const img = imgs[0];
-          return (
-            <CardLink
-              key={`poke-${index}`}
-              {...{ img, text, link }}
-              action={
-                <span
-                  className="card-link-action"
-                  onClick={() => {
-                    removeFronFavourites(p);
-                    setShowNotification(true);
-                  }}
-                >
-                  <i className="fa fa-heart"></i>
-                </span>
-              }
-            />
-          );
-        })}
+        {!favouritesList.length && (
+          <Info color="pale-red" title="No favourite yet"></Info>
+        )}
+        {favouritesList.length !== 0 &&
+          favouritesList.map((p, index) => {
+            const { img: imgs = [], name: text, id } = p;
+            const link = `/detail/${id}`;
+            const img = imgs[0];
+            return (
+              <CardLink
+                key={`poke-${index}`}
+                {...{ img, text, link }}
+                action={
+                  <span
+                    className="card-link-action"
+                    onClick={() => {
+                      removeFronFavourites(p);
+                      setShowNotification(true);
+                    }}
+                  >
+                    <i className="fa fa-heart"></i>
+                  </span>
+                }
+              />
+            );
+          })}
       </div>
       {showNotification && (
         <Notification color="red">

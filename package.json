@@ -1,6 +1,7 @@
 {
   "name": "pokedex",
   "version": "0.1.0",
+  "hompage":"/basename",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.17",

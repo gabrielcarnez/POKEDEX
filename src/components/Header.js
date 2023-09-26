@@ -12,7 +12,7 @@ const Header = ({ title = "" }) => {
       <div>
         <img
           alt="icon-pokeball"
-          src="/img/icon-pokeball.png"
+          src="./img/icon-pokeball.png"
           style={{ width: "65px" }}
           className="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"
         />

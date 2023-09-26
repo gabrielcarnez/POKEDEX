@@ -16,7 +16,7 @@ const Pokemons = () => {
   const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
-    changeFavicon("/img/icon-pokeball.png");
+    changeFavicon("./img/icon-pokeball.png");
     getPokemons(generation);
   }, [generation]);
 

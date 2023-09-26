@@ -1,6 +1,6 @@
 {
   "short_name": "POKEDEX",
   "name": "Just a pokedex",
-  "start_url": ".",
+  "start_url": "/basename",
   "display": "standalone"
 }

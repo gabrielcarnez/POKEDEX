@@ -7,7 +7,7 @@ import PokedexState from "./store/PokedexState";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter basename={"/pokedex"}>
+  <BrowserRouter basename={"/POKEDEX"}>
     <PokedexState>
       <App />
     </PokedexState>

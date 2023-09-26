@@ -16,7 +16,7 @@ const Slider = ({ images }) => {
     setCurrentSlide(nextSlide);
   };
 
-  const errorImg = "/img/no-image.png";
+  const errorImg = "./img/no-image.png";
 
   function onError(e) {
     e.target.src = errorImg;
